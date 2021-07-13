@@ -6,7 +6,8 @@ const backBtn = document.querySelector(".header__back");
 const room_heading=document.getElementById("room_heading");
 const header=document.getElementById("header");
 const end_call = document.getElementById('endMeeting');
-
+const showChatDextop = document.querySelector('#showChatDextop');
+const hideChatDextop = document.querySelector('#hideChatDextop');
 // username fetched from mail Id of user 
 var userName = username ? username : prompt('Enter your username');
 
@@ -19,6 +20,7 @@ backBtn.addEventListener("click", () => {
   document.querySelector(".main__left").style.flex = "1";
   document.querySelector(".main__right").style.display = "none";
   document.querySelector(".header__back").style.display = "none";
+  document.getElementById('room_heading').style.display = 'block';
 });
 
 
@@ -28,6 +30,28 @@ showChat.addEventListener("click", () => {
   document.querySelector(".main__right").style.flex = "1";
   document.querySelector(".main__left").style.display = "none";
   document.querySelector(".header__back").style.display = "block";
+  document.getElementById('room_heading').style.display = 'none';
+});
+
+//show chat window in dexktop display
+showChatDextop.addEventListener('click', () => {
+  document.querySelector('.main__left').style.display = 'flex';
+  document.querySelector('.main__right').style.flex = '0.2';
+  document.querySelector('.main__left').style.flex = '0.8';
+  document.querySelector('.main__right').style.display = 'flex';
+  hideChatDextop.style.display = 'flex';
+  showChatDextop.style.display = 'none';
+});
+
+//hide chat window in dexktop display
+hideChatDextop.addEventListener('click', () => {
+  document.querySelector('.main__left').style.display = 'flex';
+  document.querySelector('.main__right').style.flex = '0';
+  document.querySelector('.main__left').style.flex = '1';
+  document.querySelector('.main__right').style.display = 'none';
+  hideChatDextop.style.display = 'none';
+  showChatDextop.style.display = 'flex';
+  
 });
 
 
