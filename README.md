@@ -92,6 +92,13 @@ It replicates core functionalities of platforms like Microsoft Teams, offering a
 
 ---
 
+## 📄 Project Documentation
+
+For a detailed project overview, setup instructions, and feature descriptions, refer to the complete documentation:
+
+👉 [Click here to view the full project document](https://docs.google.com/document/d/1wPgEN77wUUpJgDg_bLwhP6xowSePz3qG/edit)
+
+
 ## 🖥️ Setup Instructions
 
 ```bash
